@@ -5,16 +5,8 @@ import streamlit as st
 from babel.numbers import format_currency
 sns.set(style='dark')
 def create_daily_orders_df(df):
-    daily_orders_df = df.resample(rule='D', on='dteday').agg({
-        "instant": "nunique",
-        "Total": "sum"
-    })
-    daily_orders_df = daily_orders_df.reset_index()
-    daily_orders_df.rename(columns={
-        "instant": "order_day",
-        "Total": "rental_count"
-    }, inplace=True)
-    
+    df['dteday'] = pd.to_datetime(df['dteday'])
+    daily_orders_df = df.resample('M', on='dteday').sum()
     return daily_orders_df
 def create_ren_cas_df(df):
     ren_cas_df = df.groupby("weekday").casual.sum().sort_values(ascending=False).reset_index()
@@ -90,7 +82,7 @@ with col2:
 fig, ax = plt.subplots(figsize=(16, 8))
 ax.plot(
     daily_orders_df["dteday"],
-    daily_orders_df["order_day"],
+    daily_orders_df["Total"],
     marker='o', 
     linewidth=2,
     color="#90CAF9"
@@ -203,4 +195,6 @@ ax[2].tick_params(axis='x', labelsize=35)
  
 st.pyplot(fig)
 
-st.caption('Copyright (c) Nafiatul Risa IDCamp 2023')
+year_copyright = datetime.date.today().year
+copyright = f"Copyright © {year_copyright} All Rights Reserved [Nafiatul Risa](https://www.linkedin.com/in/nafiatul-risa/)"
+st.caption(copyright)
