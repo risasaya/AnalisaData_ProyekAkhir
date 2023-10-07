@@ -26,10 +26,13 @@ Dicoding Proyek Analisa Data - Bike Sharing
 
 ## Run Dashboard
 1. Clone Repositor
+
 ```https://github.com/risasaya/AnalisaData_ProyekAkhir.git```
 2. Install Library
+
 ```pip install numpy pandas matplotlib seaborn jupyter streamlit babel```
 3. Run Streamlit
+
 ```streamlit run dashboard\dashboard.py```
 
 ## Tautan Dashboard
