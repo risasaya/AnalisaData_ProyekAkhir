@@ -12,7 +12,7 @@ pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
 streamlit run dashboard.py
 
 ## Tautan Dashboard
-[Can't Deploy](https://risadicodingdashboard.streamlit.app/)
+[Bike-Sharing-Dashboard](https://risadicodingdashboard.streamlit.app/)
 
 ## Dashboard
 ![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/9a3b9a1e-e15e-436f-b36c-4fc6d60e2a40)
