@@ -12,9 +12,10 @@ pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
 streamlit run dashboard.py
 
 ## Tautan Dashboard
-Can't Deploy
+[Can't Deploy](https://risadicodingdashboard.streamlit.app/)
 
 ## Dashboard
-![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/d4e773b5-246b-4123-b24d-f5424bf1df5a)
-![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/8f24f44e-d6ec-4d1b-976d-7bf9ec97f051)
-![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/5374a879-9c47-4064-8418-2c327034a9ad)
+![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/9a3b9a1e-e15e-436f-b36c-4fc6d60e2a40)
+![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/2560745f-d4a9-4ab8-9cf7-730788e3d725)
+![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/81bb35a2-dd49-4118-9789-85c2277982b8)
+![image](https://github.com/risasaya/AnalisaData_ProyekAkhir/assets/90852026/a91481bd-70a2-452b-b5e5-dcceae986e33)
