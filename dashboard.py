@@ -127,7 +127,7 @@ st.subheader("Number of Rental")
 col1, col2 = st.columns(2)
 
 with col1:
-    fig, ax = plt.subplots(figsize=(20, 10))
+    fig, ax = plt.subplots(figsize=(35, 15))
  
     sns.barplot(
         y="Total", 
@@ -144,7 +144,7 @@ with col1:
     st.pyplot(fig)
  
 with col2:
-    fig, ax = plt.subplots(figsize=(20, 10))
+    fig, ax = plt.subplots(figsize=(35, 15))
     
     colors = ["#D3D3D3", "#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
  
