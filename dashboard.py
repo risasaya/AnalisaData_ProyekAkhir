@@ -68,16 +68,14 @@ rfm_df = create_rfm(main_df)
 st.header('Bike Sharing Dashboard :sparkles:')
 
 st.subheader('Daily Rental')
- 
 col1, col2, col3 = st.columns(3)
- 
 with col1:
     total_casual = daily_orders_df.casual.sum()
     st.metric("Total Casual Rental", value=total_casual)
 
-with col1:
+with col2:
     total_registered = daily_orders_df.registered.sum()
-    st.metric("Total Casual Rental", value=total_registered)
+    st.metric("Total Registered Rental", value=total_registered)
  
 with col3:
     total_revenue = daily_orders_df.Total.sum()
