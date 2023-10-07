@@ -78,19 +78,28 @@ with col1:
 with col2:
     total_revenue = daily_orders_df.Total.sum()
     st.metric("Total Rental", value=total_revenue)
+
+plt.figure(figsize=(10, 6))
+plt.plot(daily_orders_df.index, daily_orders_df['Total'], color='#A5C0DD')
+plt.xlabel(None)
+plt.ylabel(None)
+plt.title('Number of Rental Over Time')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.tight_layout()
+st.pyplot(plt)
+# fig, ax = plt.subplots(figsize=(16, 8))
+# ax.plot(
+#     daily_orders_df["dteday"],
+#     daily_orders_df["Total"],
+#     marker='o', 
+#     linewidth=2,
+#     color="#90CAF9"
+# )
+# ax.tick_params(axis='y', labelsize=20)
+# ax.tick_params(axis='x', labelsize=15)
  
-fig, ax = plt.subplots(figsize=(16, 8))
-ax.plot(
-    daily_orders_df["dteday"],
-    daily_orders_df["Total"],
-    marker='o', 
-    linewidth=2,
-    color="#90CAF9"
-)
-ax.tick_params(axis='y', labelsize=20)
-ax.tick_params(axis='x', labelsize=15)
- 
-st.pyplot(fig)
+# st.pyplot(fig)
 
 st.subheader("Performing Casual and Registered Rental by Day")
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
