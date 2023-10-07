@@ -194,6 +194,5 @@ ax[2].tick_params(axis='x', labelsize=35)
  
 st.pyplot(fig)
 
-year_copyright = datetime.date.today().year
-copyright = f"Copyright © {year_copyright} All Rights Reserved [Nafiatul Risa](https://www.linkedin.com/in/nafiatul-risa/)"
+copyright = f"Copyright © 2023 All Rights Reserved [Nafiatul Risa](https://www.linkedin.com/in/nafiatul-risa/)"
 st.caption(copyright)
