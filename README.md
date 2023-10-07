@@ -25,12 +25,12 @@ Dicoding Proyek Analisa Data - Bike Sharing
 - cnt: count of total rental bikes including both casual and registered
 
 ## Run Dashboard
-1. Clone Repository
-'''https://github.com/risasaya/AnalisaData_ProyekAkhir.git'''
+1. Clone Repositor
+```https://github.com/risasaya/AnalisaData_ProyekAkhir.git```
 2. Install Library
-'''pip install numpy pandas matplotlib seaborn jupyter streamlit babel'''
+```pip install numpy pandas matplotlib seaborn jupyter streamlit babel```
 3. Run Streamlit
-'''streamlit run dashboard\dashboard.py'''
+```streamlit run dashboard\dashboard.py```
 
 ## Tautan Dashboard
 [Bike-Sharing-Dashboard](https://risadicodingdashboard.streamlit.app/)
