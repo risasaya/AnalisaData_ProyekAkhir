@@ -6,8 +6,8 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 def create_daily_orders_df(df):
     df['dteday'] = pd.to_datetime(df['dteday'])
-    daily_orders_df = df.resample('M', on='dteday').sum()
-    return daily_orders_df
+    orders_df = df.resample('M', on='dteday').sum()
+    return orders_df
 def create_ren_cas_df(df):
     ren_cas_df = df.groupby("weekday").casual.sum().sort_values(ascending=False).reset_index()
     return ren_cas_df
@@ -72,11 +72,11 @@ st.subheader('Daily Rental')
 col1, col2 = st.columns(2)
  
 with col1:
-    total_orders = daily_orders_df.order_day.sum()
+    total_orders = daily_orders_df.dteday.sum()
     st.metric("Total Hari", value=total_orders)
  
 with col2:
-    total_revenue = daily_orders_df.rental_count.sum()
+    total_revenue = daily_orders_df.Total.sum()
     st.metric("Total Rental", value=total_revenue)
  
 fig, ax = plt.subplots(figsize=(16, 8))
