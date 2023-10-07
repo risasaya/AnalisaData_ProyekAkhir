@@ -71,15 +71,15 @@ st.subheader('Daily Rental')
 col1, col2, col3 = st.columns(3)
 with col1:
     total_casual = daily_orders_df.casual.sum()
-    st.metric("Total Casual Rental", value=total_casual)
+    st.metric("Total Casual Rental", value=f'{total_casual:,}')
 
 with col2:
     total_registered = daily_orders_df.registered.sum()
-    st.metric("Total Registered Rental", value=total_registered)
+    st.metric("Total Registered Rental", value=f'{total_registered:,}')
  
 with col3:
     total_revenue = daily_orders_df.Total.sum()
-    st.metric("Total Rental", value=total_revenue)
+    st.metric("Total Rental", value=f'{total_revenue:,}')
 
 plt.figure(figsize=(10, 6))
 plt.plot(daily_orders_df.index, daily_orders_df['Total'], color='#A5C0DD')
