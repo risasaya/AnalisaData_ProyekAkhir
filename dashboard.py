@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+from babel.numbers import format_currency
 sns.set(style='dark')
 def create_daily_orders_df(df):
     daily_orders_df = df.resample(rule='D', on='dteday').agg({
@@ -139,7 +140,7 @@ with col1:
     ax.set_title("Number of Rental by Month", loc="center", fontsize=50)
     ax.set_ylabel(None)
     ax.set_xlabel(None)
-    ax.tick_params(axis='x', labelsize=35)
+    ax.tick_params(axis='x', labelsize=35, rotation=45)
     ax.tick_params(axis='y', labelsize=30)
     st.pyplot(fig)
  
@@ -161,36 +162,6 @@ with col2:
     ax.tick_params(axis='x', labelsize=35)
     ax.tick_params(axis='y', labelsize=30)
     st.pyplot(fig)
-
-# st.subheader("Number of Rental by Month")
-# plt.figure(figsize=(35, 15))
- 
-# sns.barplot(
-#     y="Total", 
-#     x="month",
-#     data=bymonth_df.sort_values(by="month", ascending=False),
-#     palette=colors
-# )
-# plt.title("Number of Rental by Month", loc="center", fontsize=50)
-# plt.ylabel(None)
-# plt.xlabel(None)
-# plt.tick_params(axis='x', labelsize=35)
-# st.pyplot(fig)
-
-# st.subheader("Number of Rental by Weather Situation")
-# plt.figure(figsize=(35, 15))
- 
-# sns.barplot(
-#     y="Total", 
-#     x="weather_situation",
-#     data=byweather_df.sort_values(by="weather_situation", ascending=False),
-#     palette=colors
-# )
-# plt.title("Number of Rental by Weather Situation", loc="center", fontsize=15)
-# plt.ylabel(None)
-# plt.xlabel(None)
-# plt.tick_params(axis='x', labelsize=12)
-# st.pyplot(fig)
 
 st.subheader("Best Rental Based on RFM Parameters Hour")
 col1, col2, col3 = st.columns(3)
