@@ -35,7 +35,7 @@ Dicoding Proyek Analisa Data - Bike Sharing
 
 3. Run Streamlit
 
-```streamlit run dashboard\dashboard.py```
+```streamlit run dashboard.py```
 
 
 ## Tautan Dashboard
